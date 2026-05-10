@@ -1,0 +1,669 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// =====================================================================
+// PLACEHOLDER CONTENT — Replace every value marked [PLACEHOLDER]
+// before publishing the site.
+// =====================================================================
+
+const tutor = {
+  name:           'Adrian Mungroo',
+  tagline:        'PhD candidate, Mechanical Engineering · Georgia Tech',
+  location:       'Atlanta, GA · online (Caribbean)',
+  whatsapp:       '+1 (868) 000-0000',
+  email:          'yourname@email.com',
+  phone:          '+1 (868) 000-0000',
+  experience:     '[X]',
+};
+---
+
+<BaseLayout
+  title={`${tutor.name} · CSEC & CAPE Mathematics`}
+  description={`One-on-one CSEC and CAPE Mathematics tutoring with ${tutor.name}. ${tutor.tagline}. Mathematics, Additional Mathematics, Pure Mathematics, and Applied Mathematics — syllabus work, past papers, exam technique.`}
+>
+
+  <!-- ====================================================
+    NAVIGATION
+  ==================================================== -->
+  <nav class="navbar">
+    <div class="container navbar__inner">
+      <button id="navToggle" class="navbar__toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul id="navLinks" class="navbar__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#subjects">Subjects</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#approach">My Approach</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li>
+          <a href="#contact" class="navbar__cta">Get in Touch</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ====================================================
+    HERO
+  ==================================================== -->
+  <section class="hero" id="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <h1 class="hero__title">
+          CSEC &amp; CAPE<br/>
+          <span class="hero__title-name">Mathematics</span>
+        </h1>
+
+        <p class="hero__tagline">{tutor.tagline}</p>
+
+        <p class="hero__desc">
+          One-on-one tutoring for Caribbean secondary exams: syllabus coverage,
+          past papers, and timed practice. I am a{' '}
+          <strong>PhD candidate in mechanical engineering</strong> at Georgia Tech;
+          my research uses the same core toolkit CAPE emphasizes — calculus,
+          statistics, linear algebra, and careful modelling.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary">Contact Me Directly</a>
+          <a href="#subjects" class="btn btn--outline">View Subjects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+    ABOUT
+  ==================================================== -->
+  <section class="section" id="about">
+    <div class="container about__inner">
+      <div class="about__content">
+        <span class="section-eyebrow">About</span>
+        <h2 class="section-title">Background</h2>
+
+        <div class="about__bio">
+          <p>
+            I'm <strong>{tutor.name}</strong>. I tutor online for students in the Caribbean, with sessions tailored so that actual learning takes place. Born and raised in Trinidad, I made it through the traditional Caribbean education system, winning an open scholarship to give me the privilege to study in one of the best universities in the world. Having 10+ merit list appearances, I know exactly what it takes to make you (or your child) succeed. 
+          </p>
+          <p>
+            I am a <strong>PhD candidate in mechanical engineering</strong>{' '}
+            at Georgia Tech. My research runs through the{' '}
+            <strong>Aerospace Systems Design Laboratory (ASDL)</strong> — spatial modelling,
+            building energy systems, and geostatistics — work that leans on applied calculus,
+            probability, linear algebra, and careful data analysis. In summer 2025 I interned at
+            the <strong>National Renewable Energy Laboratory (NREL)</strong> on building-performance
+            modelling. That keeps me in daily contact with the same mathematical habits CAPE rewards:
+            setting up a problem correctly, checking units, and writing mathematics clearly.
+          </p>
+          <p>
+            I have tutored privately for <strong>{tutor.experience} years</strong>.
+            I structure lessons around CXC-style marking expectations so practice
+            tracks what examiners actually score.
+          </p>
+        </div>
+
+        <ul class="about__highlights">
+          <li class="about__highlight">
+            <span class="about__highlight-icon">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            CSEC &amp; CAPE syllabuses, past papers, and mark-scheme-driven practice
+          </li>
+          <li class="about__highlight">
+            <span class="about__highlight-icon">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            PhD candidate, Mechanical Engineering — Georgia Institute of Technology
+          </li>
+          <li class="about__highlight">
+            <span class="about__highlight-icon">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Research at GT's ASDL (spatial analytics, campus energy); summer 2025 intern at NREL (building performance)
+          </li>
+          <li class="about__highlight">
+            <span class="about__highlight-icon">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Online sessions — students anywhere in the Caribbean
+          </li>
+        </ul>
+
+        <a href="#contact" class="btn btn--outline-dark">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+    SUBJECTS
+  ==================================================== -->
+  <section class="section section--alt" id="subjects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">What I Teach</span>
+        <h2 class="section-title">Subjects &amp; Levels</h2>
+        <p class="section-subtitle">
+          CSEC through CAPE Unit 2 — syllabus lists below.
+        </p>
+      </div>
+
+      <div class="subjects__grid">
+
+        <!-- CSEC Mathematics -->
+        <div class="subject-card">
+          <span class="subject-card__badge badge--csec">CSEC</span>
+          <h3 class="subject-card__title">Mathematics</h3>
+          <ul class="subject-card__topics">
+            <li class="subject-card__topic">Number theory &amp; computation</li>
+            <li class="subject-card__topic">Algebra &amp; relations/functions</li>
+            <li class="subject-card__topic">Geometry &amp; trigonometry</li>
+            <li class="subject-card__topic">Statistics &amp; probability</li>
+          </ul>
+        </div>
+
+        <!-- CSEC Additional Mathematics -->
+        <div class="subject-card">
+          <span class="subject-card__badge badge--csec">CSEC</span>
+          <h3 class="subject-card__title">Additional Mathematics</h3>
+          <ul class="subject-card__topics">
+            <li class="subject-card__topic">Algebra &amp; functions</li>
+            <li class="subject-card__topic">Coordinate geometry</li>
+            <li class="subject-card__topic">Introductory calculus</li>
+            <li class="subject-card__topic">Vectors &amp; matrices</li>
+            <li class="subject-card__topic">Probability &amp; statistics</li>
+          </ul>
+        </div>
+
+        <!-- CAPE Pure Mathematics -->
+        <div class="subject-card">
+          <span class="subject-card__badge badge--cape">CAPE</span>
+          <h3 class="subject-card__title">Pure Mathematics</h3>
+          <ul class="subject-card__topics">
+            <li class="subject-card__topic">Calculus (differentiation &amp; integration)</li>
+            <li class="subject-card__topic">Complex numbers &amp; matrices</li>
+            <li class="subject-card__topic">Sequences, series &amp; limits</li>
+            <li class="subject-card__topic">Differential equations</li>
+            <li class="subject-card__topic">Internal assessment (problem formulation &amp; write-up)</li>
+          </ul>
+        </div>
+
+        <!-- CAPE Applied Mathematics -->
+        <div class="subject-card">
+          <span class="subject-card__badge badge--cape">CAPE</span>
+          <h3 class="subject-card__title">Applied Mathematics</h3>
+          <ul class="subject-card__topics">
+            <li class="subject-card__topic">Statistics &amp; probability distributions</li>
+            <li class="subject-card__topic">Mechanics (statics &amp; dynamics)</li>
+            <li class="subject-card__topic">Discrete mathematics</li>
+            <li class="subject-card__topic">Hypothesis testing</li>
+            <li class="subject-card__topic">Internal assessment (problem formulation &amp; write-up)</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+    CREDENTIALS
+  ==================================================== -->
+  <section class="section" id="credentials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Background &amp; Experience</span>
+        <h2 class="section-title">Credentials</h2>
+        <p class="section-subtitle">
+          Georgia Tech graduate training; tutoring aligned to CXC syllabuses and marking.
+        </p>
+      </div>
+
+      <div class="credentials__inner">
+
+        <ul class="credentials__list">
+          <li class="credential-item">
+            <div class="credential-item__icon">
+              <!-- Graduation cap icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/>
+              </svg>
+            </div>
+            <div class="credential-item__body">
+              <div class="credential-item__title">Academic Qualifications</div>
+              <div class="credential-item__detail">
+                PhD candidate in mechanical engineering. Technical focus: spatial modelling,
+                geostatistics, building energy systems — calculus, probability, linear algebra,
+                and numerical work on real datasets.
+              </div>
+            </div>
+          </li>
+
+          <li class="credential-item">
+            <div class="credential-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+            </div>
+            <div class="credential-item__body">
+              <div class="credential-item__title">Labs &amp; placements</div>
+              <div class="credential-item__detail">
+                <strong>Graduate researcher</strong>, Aerospace Systems Design Laboratory (ASDL),
+                Georgia Tech — spatial data analytics and campus-scale energy infrastructure (2022–present).
+                <strong>Graduate summer intern</strong>, National Renewable Energy Laboratory (NREL)
+                — building performance modelling (2025).
+              </div>
+            </div>
+          </li>
+
+          <li class="credential-item">
+            <div class="credential-item__icon">
+              <!-- Certificate icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="9" y1="13" x2="15" y2="13"/>
+                <line x1="9" y1="17" x2="15" y2="17"/>
+              </svg>
+            </div>
+            <div class="credential-item__body">
+              <div class="credential-item__title">Tutoring format</div>
+              <div class="credential-item__detail">
+                Private tutoring for CSEC and CAPE Mathematics — one-on-one and small groups.
+                Not a certified classroom teacher; focus is exam preparation and technical clarity.
+              </div>
+            </div>
+          </li>
+
+          <li class="credential-item">
+            <div class="credential-item__icon">
+              <!-- Bar chart icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
+            <div class="credential-item__body">
+              <div class="credential-item__title">Outcomes</div>
+              <div class="credential-item__detail">
+                Ask when you reach out — I can describe typical trajectories for students at your level.
+              </div>
+            </div>
+          </li>
+
+          <li class="credential-item">
+            <div class="credential-item__icon">
+              <!-- Clock icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div class="credential-item__body">
+              <div class="credential-item__title">Years of Experience</div>
+              <div class="credential-item__detail">
+                {tutor.experience} years tutoring Form 4 through CAPE Upper Six, primarily online for Caribbean students.
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="credentials__qualifications">
+          <h3>Education &amp; Training</h3>
+          <ul class="qualifications-list">
+            <li class="qualification-entry">
+              <div class="qualification-entry__degree">
+                Ph.D. candidate, Mechanical Engineering — in progress
+              </div>
+              <div class="qualification-entry__institution">
+                Georgia Institute of Technology
+              </div>
+            </li>
+            <li class="qualification-entry">
+              <div class="qualification-entry__degree">
+                M.S., Mechanical Engineering — 2025
+              </div>
+              <div class="qualification-entry__institution">
+                Georgia Institute of Technology
+              </div>
+            </li>
+            <li class="qualification-entry">
+              <div class="qualification-entry__degree">
+                B.S., Aerospace Engineering — 2020
+              </div>
+              <div class="qualification-entry__institution">
+                Georgia Institute of Technology
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+    APPROACH / HOW I TEACH
+  ==================================================== -->
+  <section class="section section--alt" id="approach">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">My Teaching Method</span>
+        <h2 class="section-title">How I Work With Students</h2>
+        <p class="section-subtitle">
+          Diagnostic first, then syllabus-aligned practice — adjusted to what you actually miss.
+        </p>
+      </div>
+
+      <div class="approach__inner">
+        <div class="approach-card">
+          <div class="approach-card__number">1</div>
+          <h3 class="approach-card__title">Assess &amp; Diagnose</h3>
+          <p class="approach-card__desc">
+            Short diagnostic first so we spend time on gaps, not on topics you already handle.
+          </p>
+        </div>
+
+        <div class="approach-card">
+          <div class="approach-card__number">2</div>
+          <h3 class="approach-card__title">Build Understanding</h3>
+          <p class="approach-card__desc">
+            Worked examples and past-paper questions, with emphasis on setup,
+            reasoning steps, and examiner-style marking.
+          </p>
+        </div>
+
+        <div class="approach-card">
+          <div class="approach-card__number">3</div>
+          <h3 class="approach-card__title">Practise &amp; Perfect</h3>
+          <p class="approach-card__desc">
+            Timed papers where useful; feedback on where marks are gained or lost
+            relative to the mark scheme.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+    TESTIMONIALS
+  ==================================================== -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Student &amp; Parent Feedback</span>
+        <h2 class="section-title">What People Say</h2>
+      </div>
+
+      <div class="testimonials__grid">
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__quote">&ldquo;</div>
+          <p class="testimonial-card__text">
+            <!-- [PLACEHOLDER] Replace with a real testimonial when available -->
+            [Student/Parent testimonial here — describe the improvement they saw,
+            how the sessions helped, and why they would recommend you.]
+          </p>
+          <div class="testimonial-card__author">[Student or Parent Name]</div>
+          <div class="testimonial-card__role">CSEC Mathematics — Grade I</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__quote">&ldquo;</div>
+          <p class="testimonial-card__text">
+            <!-- [PLACEHOLDER] Replace with a real testimonial when available -->
+            [Another testimonial. You can collect these from parents or past
+            students and add them here.]
+          </p>
+          <div class="testimonial-card__author">[Student or Parent Name]</div>
+          <div class="testimonial-card__role">CAPE Pure Mathematics — Distinction</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__quote">&ldquo;</div>
+          <p class="testimonial-card__text">
+            <!-- [PLACEHOLDER] Replace with a real testimonial when available -->
+            [A third testimonial. Three is a good number to start with —
+            add more as you receive them.]
+          </p>
+          <div class="testimonial-card__author">[Student or Parent Name]</div>
+          <div class="testimonial-card__role">CAPE Applied Mathematics — Unit 1</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+    FAQ
+  ==================================================== -->
+  <section class="section section--alt" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Common Questions</span>
+        <h2 class="section-title">FAQ</h2>
+        <p class="section-subtitle">
+          Quick answers to what parents and students usually ask first.
+        </p>
+      </div>
+
+      <div class="faq__inner">
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Do you offer in-person or online sessions?
+            <svg class="faq-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-item__answer">
+            <!-- [PLACEHOLDER] Adjust to your actual offering -->
+            Both options are available. In-person sessions are held at
+            [your location / a quiet venue]. Online sessions are conducted
+            via [Zoom / Google Meet / WhatsApp Video — pick yours], so
+            students from anywhere in the Caribbean can participate.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            How long is a typical session?
+            <svg class="faq-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-item__answer">
+            <!-- [PLACEHOLDER] Adjust to your actual session length -->
+            Sessions are typically [60 – 90] minutes. For intensive exam
+            preparation closer to the exam period, extended 2-hour sessions
+            can be arranged.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            What is the cost per session?
+            <svg class="faq-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-item__answer">
+            Rates depend on level (CSEC vs CAPE), frequency, and preparation intensity.
+            Message me for current pricing.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            How early should we start tutoring before the exams?
+            <svg class="faq-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-item__answer">
+            Earlier is usually easier on weak foundations. Shorter revision-only
+            blocks before exams can still help if time is tight.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Do you help with the CAPE Internal Assessment (IA)?
+            <svg class="faq-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-item__answer">
+            Yes — Pure and Applied. Topic selection, mathematical working, structure,
+            and alignment with the IA criteria. Research writing is part of my day job,
+            so we can tighten problem statements and presentation without exceeding CXC rules on external help.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Can you tutor students from different islands?
+            <svg class="faq-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-item__answer">
+            Yes. Syllabuses are common across the region; sessions are online.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+    CONTACT
+  ==================================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Reach Out</span>
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-subtitle">
+          No online forms — just reach out directly and I'll get back to you
+          as soon as I can.
+        </p>
+      </div>
+
+      <div class="contact__inner">
+
+        <div class="contact__info">
+          <p class="contact__intro">
+            WhatsApp or email is fine. Include year level (or Unit), subject(s),
+            and when you can meet online.
+          </p>
+
+          <div class="contact__methods">
+
+            <a
+              href={`https://wa.me/${tutor.whatsapp.replace(/\D/g, '')}`}
+              class="contact-method"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="contact-method__icon contact-method__icon--whatsapp">
+                <!-- WhatsApp icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-method__label">WhatsApp</div>
+                <!-- [PLACEHOLDER] Replace with your number -->
+                <div class="contact-method__value">{tutor.whatsapp}</div>
+              </div>
+            </a>
+
+            <a
+              href={`mailto:${tutor.email}`}
+              class="contact-method"
+            >
+              <div class="contact-method__icon contact-method__icon--email">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-method__label">Email</div>
+                <!-- [PLACEHOLDER] Replace with your email -->
+                <div class="contact-method__value">{tutor.email}</div>
+              </div>
+            </a>
+
+            <a
+              href={`tel:${tutor.phone.replace(/\s/g, '')}`}
+              class="contact-method"
+            >
+              <div class="contact-method__icon contact-method__icon--phone">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-method__label">Phone / Call</div>
+                <!-- [PLACEHOLDER] Replace with your phone number -->
+                <div class="contact-method__value">{tutor.phone}</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact__note">
+          <h3 class="contact__note-title">Session Availability</h3>
+          <p class="contact__note-text">
+            <!-- [PLACEHOLDER] Update to match your actual schedule -->
+            I typically have openings on afternoons and weekends. Availability
+            changes during exam season — contact me early to secure a regular slot.
+          </p>
+
+          <div class="contact__availability">
+            <!-- [PLACEHOLDER] Adjust days and times to your real schedule -->
+            <div class="availability-row">
+              <span class="availability-row__day">Weekday Afternoons</span>
+              <span class="availability-row__time">[e.g. 3 pm – 7 pm]</span>
+            </div>
+            <div class="availability-row">
+              <span class="availability-row__day">Saturdays</span>
+              <span class="availability-row__time">[e.g. 9 am – 4 pm]</span>
+            </div>
+            <div class="availability-row">
+              <span class="availability-row__day">Sundays</span>
+              <span class="availability-row__time">[e.g. By arrangement]</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+    FOOTER
+  ==================================================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        {tutor.name} · CSEC &amp; CAPE Mathematics
+      </div>
+      <p class="footer__copy">
+        &copy; {new Date().getFullYear()} {tutor.name} &bull; {tutor.location}
+      </p>
+      <nav class="footer__links">
+        <a href="#about">About</a>
+        <a href="#subjects">Subjects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+</BaseLayout>

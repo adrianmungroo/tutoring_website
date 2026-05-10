@@ -1,0 +1,74 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'CSEC & CAPE Mathematics tutoring',
+  description =
+    'One-on-one CSEC and CAPE Mathematics tutoring (Mathematics, Additional Mathematics, Pure Mathematics, Applied Mathematics). Syllabus coverage, past papers, and exam technique.',
+} = Astro.props;
+
+const canonicalURL = Astro.url;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Social preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+
+    <script>
+      // Mobile nav toggle
+      const toggle = document.getElementById('navToggle');
+      const links = document.getElementById('navLinks');
+      toggle?.addEventListener('click', () => {
+        links?.classList.toggle('is-open');
+      });
+
+      // Close mobile nav when a link is clicked
+      links?.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', () => links.classList.remove('is-open'));
+      });
+
+      // Minimal FAQ accordion
+      document.querySelectorAll<HTMLElement>('.faq-item__question').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq-item');
+          if (!item) return;
+          const isOpen = item.classList.contains('faq-item--open');
+          document.querySelectorAll('.faq-item').forEach((el) =>
+            el.classList.remove('faq-item--open'),
+          );
+          if (!isOpen) item.classList.add('faq-item--open');
+        });
+      });
+    </script>
+  </body>
+</html>
