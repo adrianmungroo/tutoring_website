@@ -16,8 +16,8 @@
   --color-card-bg:    #ffffff;
   --color-section-alt:#f2f1ee;
 
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Georgia', 'Times New Roman', serif;
+  --font-body: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
 
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -41,10 +41,11 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  font-family: var(--font-body);
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.7;
@@ -98,7 +99,7 @@ ul {
 }
 
 .section-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 700;
   color: var(--color-navy);
@@ -260,7 +261,7 @@ ul {
 }
 
 .hero__title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(2.2rem, 5vw, 3.6rem);
   font-weight: 700;
   color: var(--color-white);
@@ -404,7 +405,7 @@ ul {
 }
 
 .subject-card__title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-navy);
@@ -491,7 +492,7 @@ ul {
 }
 
 .credentials__qualifications h3 {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.15rem;
   color: var(--color-gold-light);
   margin-bottom: 1.5rem;
@@ -539,7 +540,7 @@ ul {
   font-size: 3rem;
   line-height: 1;
   color: var(--color-gold);
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   margin-bottom: 0.5rem;
   opacity: 0.6;
 }
@@ -725,7 +726,7 @@ button.contact-method {
 }
 
 .contact__note-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.3rem;
   color: var(--color-gold-light);
   margin-bottom: 1rem;
@@ -778,7 +779,7 @@ button.contact-method {
 }
 
 .footer__brand {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1rem;
   color: var(--color-white);
 }
