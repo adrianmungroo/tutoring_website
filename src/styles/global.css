@@ -124,15 +124,9 @@ ul {
   font-weight: 600;
   cursor: pointer;
   border: 2px solid transparent;
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease,
-              transform 0.15s ease, box-shadow 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   text-decoration: none;
   white-space: nowrap;
-}
-
-.btn:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
 }
 
 .btn--primary {
@@ -287,15 +281,8 @@ ul {
 .hero__desc {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.65);
-  margin-bottom: 2.25rem;
+  margin-bottom: 0;
   line-height: 1.8;
-}
-
-.hero__actions {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 /* --- About Section --- */
@@ -381,7 +368,6 @@ ul {
   padding: 2rem 1.75rem;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--color-border);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
   overflow: hidden;
 }
@@ -394,11 +380,6 @@ ul {
   right: 0;
   height: 4px;
   background: linear-gradient(90deg, var(--color-navy), var(--color-gold));
-}
-
-.subject-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
 }
 
 .subject-card__badge {
@@ -538,51 +519,6 @@ ul {
   color: rgba(255, 255, 255, 0.58);
 }
 
-/* --- Approach Section --- */
-.approach__inner {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
-}
-
-.approach-card {
-  background-color: var(--color-card-bg);
-  border-radius: var(--radius-md);
-  padding: 2rem;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--color-border);
-  text-align: center;
-}
-
-.approach-card__number {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-navy), var(--color-navy-light));
-  color: var(--color-gold-light);
-  font-family: var(--font-serif);
-  font-size: 1.3rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.25rem;
-}
-
-.approach-card__title {
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--color-navy);
-  margin-bottom: 0.75rem;
-}
-
-.approach-card__desc {
-  font-size: 0.9rem;
-  color: var(--color-muted);
-  line-height: 1.7;
-}
-
 /* --- Testimonials Section --- */
 .testimonials__grid {
   display: grid;
@@ -717,13 +653,27 @@ ul {
   background-color: var(--color-card-bg);
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
-  transition: box-shadow 0.2s ease, transform 0.15s ease;
   text-decoration: none;
 }
 
-.contact-method:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateX(4px);
+button.contact-method {
+  width: 100%;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  color: inherit;
+}
+
+.contact-method__hint {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+.contact-method--copy.is-copied .contact-method__hint {
+  color: #16a34a;
 }
 
 .contact-method__icon {
@@ -867,10 +817,6 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .approach__inner {
-    grid-template-columns: 1fr;
-  }
-
   .contact__inner {
     grid-template-columns: 1fr;
   }
@@ -900,11 +846,6 @@ ul {
 
   .navbar__toggle {
     display: flex;
-  }
-
-  .hero__actions {
-    flex-direction: column;
-    align-items: center;
   }
 
   .footer__inner {

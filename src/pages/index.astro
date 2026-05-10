@@ -8,17 +8,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const tutor = {
   name:           'Adrian Mungroo',
-  tagline:        'PhD candidate, Mechanical Engineering · Georgia Tech',
+  tagline:        'Adrian Mungroo | PhD candidate, Georgia Institute of Technology',
   location:       'Atlanta, GA · online (Caribbean)',
-  whatsapp:       '+1 (868) 000-0000',
-  email:          'yourname@email.com',
-  phone:          '+1 (868) 000-0000',
-  experience:     '[X]',
+  whatsapp:       '+1 (404) 786-6467',
+  email:          'adrianmungroo12@gmail.com',
+  phone:          '+1 (404) 740-1519',
+  experience:     '10',
 };
 ---
 
 <BaseLayout
-  title={`${tutor.name} · CSEC & CAPE Mathematics`}
+  title={`${tutor.name} · CSEC & CAPE Tutoring`}
   description={`One-on-one CSEC and CAPE Mathematics tutoring with ${tutor.name}. ${tutor.tagline}. Mathematics, Additional Mathematics, Pure Mathematics, and Applied Mathematics — syllabus work, past papers, exam technique.`}
 >
 
@@ -35,12 +35,12 @@ const tutor = {
 
       <ul id="navLinks" class="navbar__links">
         <li><a href="#about">About</a></li>
-        <li><a href="#subjects">Subjects</a></li>
         <li><a href="#credentials">Credentials</a></li>
-        <li><a href="#approach">My Approach</a></li>
+        <li><a href="#subjects">Subjects</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li>
-          <a href="#contact" class="navbar__cta">Get in Touch</a>
+          <a href="#contact" class="navbar__cta">Contact</a>
         </li>
       </ul>
     </div>
@@ -54,23 +54,14 @@ const tutor = {
       <div class="hero__content">
         <h1 class="hero__title">
           CSEC &amp; CAPE<br/>
-          <span class="hero__title-name">Mathematics</span>
+          <span class="hero__title-name">Tutoring</span>
         </h1>
 
         <p class="hero__tagline">{tutor.tagline}</p>
 
         <p class="hero__desc">
-          One-on-one tutoring for Caribbean secondary exams: syllabus coverage,
-          past papers, and timed practice. I am a{' '}
-          <strong>PhD candidate in mechanical engineering</strong> at Georgia Tech;
-          my research uses the same core toolkit CAPE emphasizes — calculus,
-          statistics, linear algebra, and careful modelling.
+          Catchy description
         </p>
-
-        <div class="hero__actions">
-          <a href="#contact" class="btn btn--primary">Contact Me Directly</a>
-          <a href="#subjects" class="btn btn--outline">View Subjects</a>
-        </div>
       </div>
     </div>
   </section>
@@ -81,8 +72,7 @@ const tutor = {
   <section class="section" id="about">
     <div class="container about__inner">
       <div class="about__content">
-        <span class="section-eyebrow">About</span>
-        <h2 class="section-title">Background</h2>
+        <h2 class="section-title">About</h2>
 
         <div class="about__bio">
           <p>
@@ -138,85 +128,14 @@ const tutor = {
   </section>
 
   <!-- ====================================================
-    SUBJECTS
-  ==================================================== -->
-  <section class="section section--alt" id="subjects">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">What I Teach</span>
-        <h2 class="section-title">Subjects &amp; Levels</h2>
-        <p class="section-subtitle">
-          CSEC through CAPE Unit 2 — syllabus lists below.
-        </p>
-      </div>
-
-      <div class="subjects__grid">
-
-        <!-- CSEC Mathematics -->
-        <div class="subject-card">
-          <span class="subject-card__badge badge--csec">CSEC</span>
-          <h3 class="subject-card__title">Mathematics</h3>
-          <ul class="subject-card__topics">
-            <li class="subject-card__topic">Number theory &amp; computation</li>
-            <li class="subject-card__topic">Algebra &amp; relations/functions</li>
-            <li class="subject-card__topic">Geometry &amp; trigonometry</li>
-            <li class="subject-card__topic">Statistics &amp; probability</li>
-          </ul>
-        </div>
-
-        <!-- CSEC Additional Mathematics -->
-        <div class="subject-card">
-          <span class="subject-card__badge badge--csec">CSEC</span>
-          <h3 class="subject-card__title">Additional Mathematics</h3>
-          <ul class="subject-card__topics">
-            <li class="subject-card__topic">Algebra &amp; functions</li>
-            <li class="subject-card__topic">Coordinate geometry</li>
-            <li class="subject-card__topic">Introductory calculus</li>
-            <li class="subject-card__topic">Vectors &amp; matrices</li>
-            <li class="subject-card__topic">Probability &amp; statistics</li>
-          </ul>
-        </div>
-
-        <!-- CAPE Pure Mathematics -->
-        <div class="subject-card">
-          <span class="subject-card__badge badge--cape">CAPE</span>
-          <h3 class="subject-card__title">Pure Mathematics</h3>
-          <ul class="subject-card__topics">
-            <li class="subject-card__topic">Calculus (differentiation &amp; integration)</li>
-            <li class="subject-card__topic">Complex numbers &amp; matrices</li>
-            <li class="subject-card__topic">Sequences, series &amp; limits</li>
-            <li class="subject-card__topic">Differential equations</li>
-            <li class="subject-card__topic">Internal assessment (problem formulation &amp; write-up)</li>
-          </ul>
-        </div>
-
-        <!-- CAPE Applied Mathematics -->
-        <div class="subject-card">
-          <span class="subject-card__badge badge--cape">CAPE</span>
-          <h3 class="subject-card__title">Applied Mathematics</h3>
-          <ul class="subject-card__topics">
-            <li class="subject-card__topic">Statistics &amp; probability distributions</li>
-            <li class="subject-card__topic">Mechanics (statics &amp; dynamics)</li>
-            <li class="subject-card__topic">Discrete mathematics</li>
-            <li class="subject-card__topic">Hypothesis testing</li>
-            <li class="subject-card__topic">Internal assessment (problem formulation &amp; write-up)</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================
     CREDENTIALS
   ==================================================== -->
-  <section class="section" id="credentials">
+  <section class="section section--alt" id="credentials">
     <div class="container">
       <div class="section-header">
-        <span class="section-eyebrow">Background &amp; Experience</span>
         <h2 class="section-title">Credentials</h2>
         <p class="section-subtitle">
-          Georgia Tech graduate training; tutoring aligned to CXC syllabuses and marking.
+          Degrees, research, and how I run sessions — aligned to CXC syllabuses and marking.
         </p>
       </div>
 
@@ -347,44 +266,70 @@ const tutor = {
   </section>
 
   <!-- ====================================================
-    APPROACH / HOW I TEACH
+    SUBJECTS
   ==================================================== -->
-  <section class="section section--alt" id="approach">
+  <section class="section" id="subjects">
     <div class="container">
       <div class="section-header">
-        <span class="section-eyebrow">My Teaching Method</span>
-        <h2 class="section-title">How I Work With Students</h2>
+        <h2 class="section-title">Subjects</h2>
         <p class="section-subtitle">
-          Diagnostic first, then syllabus-aligned practice — adjusted to what you actually miss.
+          CSEC through CAPE Unit 2.
         </p>
       </div>
 
-      <div class="approach__inner">
-        <div class="approach-card">
-          <div class="approach-card__number">1</div>
-          <h3 class="approach-card__title">Assess &amp; Diagnose</h3>
-          <p class="approach-card__desc">
-            Short diagnostic first so we spend time on gaps, not on topics you already handle.
-          </p>
+      <div class="subjects__grid">
+
+        <!-- CSEC Mathematics -->
+        <div class="subject-card">
+          <span class="subject-card__badge badge--csec">CSEC</span>
+          <h3 class="subject-card__title">Mathematics</h3>
+          <ul class="subject-card__topics">
+            <li class="subject-card__topic">Number theory &amp; computation</li>
+            <li class="subject-card__topic">Algebra &amp; relations/functions</li>
+            <li class="subject-card__topic">Geometry &amp; trigonometry</li>
+            <li class="subject-card__topic">Statistics &amp; probability</li>
+          </ul>
         </div>
 
-        <div class="approach-card">
-          <div class="approach-card__number">2</div>
-          <h3 class="approach-card__title">Build Understanding</h3>
-          <p class="approach-card__desc">
-            Worked examples and past-paper questions, with emphasis on setup,
-            reasoning steps, and examiner-style marking.
-          </p>
+        <!-- CSEC Additional Mathematics -->
+        <div class="subject-card">
+          <span class="subject-card__badge badge--csec">CSEC</span>
+          <h3 class="subject-card__title">Additional Mathematics</h3>
+          <ul class="subject-card__topics">
+            <li class="subject-card__topic">Algebra &amp; functions</li>
+            <li class="subject-card__topic">Coordinate geometry</li>
+            <li class="subject-card__topic">Introductory calculus</li>
+            <li class="subject-card__topic">Vectors &amp; matrices</li>
+            <li class="subject-card__topic">Probability &amp; statistics</li>
+          </ul>
         </div>
 
-        <div class="approach-card">
-          <div class="approach-card__number">3</div>
-          <h3 class="approach-card__title">Practise &amp; Perfect</h3>
-          <p class="approach-card__desc">
-            Timed papers where useful; feedback on where marks are gained or lost
-            relative to the mark scheme.
-          </p>
+        <!-- CAPE Pure Mathematics -->
+        <div class="subject-card">
+          <span class="subject-card__badge badge--cape">CAPE</span>
+          <h3 class="subject-card__title">Pure Mathematics</h3>
+          <ul class="subject-card__topics">
+            <li class="subject-card__topic">Calculus (differentiation &amp; integration)</li>
+            <li class="subject-card__topic">Complex numbers &amp; matrices</li>
+            <li class="subject-card__topic">Sequences, series &amp; limits</li>
+            <li class="subject-card__topic">Differential equations</li>
+            <li class="subject-card__topic">Internal assessment (problem formulation &amp; write-up)</li>
+          </ul>
         </div>
+
+        <!-- CAPE Applied Mathematics -->
+        <div class="subject-card">
+          <span class="subject-card__badge badge--cape">CAPE</span>
+          <h3 class="subject-card__title">Applied Mathematics</h3>
+          <ul class="subject-card__topics">
+            <li class="subject-card__topic">Statistics &amp; probability distributions</li>
+            <li class="subject-card__topic">Mechanics (statics &amp; dynamics)</li>
+            <li class="subject-card__topic">Discrete mathematics</li>
+            <li class="subject-card__topic">Hypothesis testing</li>
+            <li class="subject-card__topic">Internal assessment (problem formulation &amp; write-up)</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
@@ -392,11 +337,10 @@ const tutor = {
   <!-- ====================================================
     TESTIMONIALS
   ==================================================== -->
-  <section class="section" id="testimonials">
+  <section class="section section--alt" id="testimonials">
     <div class="container">
       <div class="section-header">
-        <span class="section-eyebrow">Student &amp; Parent Feedback</span>
-        <h2 class="section-title">What People Say</h2>
+        <h2 class="section-title">Testimonials</h2>
       </div>
 
       <div class="testimonials__grid">
@@ -441,13 +385,12 @@ const tutor = {
   <!-- ====================================================
     FAQ
   ==================================================== -->
-  <section class="section section--alt" id="faq">
+  <section class="section" id="faq">
     <div class="container">
       <div class="section-header">
-        <span class="section-eyebrow">Common Questions</span>
         <h2 class="section-title">FAQ</h2>
         <p class="section-subtitle">
-          Quick answers to what parents and students usually ask first.
+          Sessions, pricing, and what I can help with.
         </p>
       </div>
 
@@ -543,15 +486,10 @@ const tutor = {
   <!-- ====================================================
     CONTACT
   ==================================================== -->
-  <section class="section" id="contact">
+  <section class="section section--alt" id="contact">
     <div class="container">
       <div class="section-header">
-        <span class="section-eyebrow">Reach Out</span>
-        <h2 class="section-title">Get in Touch</h2>
-        <p class="section-subtitle">
-          No online forms — just reach out directly and I'll get back to you
-          as soon as I can.
-        </p>
+        <h2 class="section-title">Contact</h2>
       </div>
 
       <div class="contact__inner">
@@ -583,9 +521,11 @@ const tutor = {
               </div>
             </a>
 
-            <a
-              href={`mailto:${tutor.email}`}
-              class="contact-method"
+            <button
+              type="button"
+              class="contact-method contact-method--copy"
+              id="copy-email-btn"
+              aria-label={`Copy ${tutor.email} to clipboard`}
             >
               <div class="contact-method__icon contact-method__icon--email">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -593,12 +533,12 @@ const tutor = {
                   <polyline points="22,6 12,13 2,6"/>
                 </svg>
               </div>
-              <div>
+              <div class="contact-method__text">
                 <div class="contact-method__label">Email</div>
-                <!-- [PLACEHOLDER] Replace with your email -->
                 <div class="contact-method__value">{tutor.email}</div>
+                <span class="contact-method__hint">Click to copy</span>
               </div>
-            </a>
+            </button>
 
             <a
               href={`tel:${tutor.phone.replace(/\s/g, '')}`}
@@ -653,17 +593,43 @@ const tutor = {
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        {tutor.name} · CSEC &amp; CAPE Mathematics
+        {tutor.name} · CSEC &amp; CAPE Tutoring
       </div>
       <p class="footer__copy">
         &copy; {new Date().getFullYear()} {tutor.name} &bull; {tutor.location}
       </p>
       <nav class="footer__links">
         <a href="#about">About</a>
+        <a href="#credentials">Credentials</a>
         <a href="#subjects">Subjects</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
-      </nav>
     </div>
   </footer>
+
+  <script define:vars={{ emailAddress: tutor.email }}>
+    const btn = document.getElementById('copy-email-btn');
+    const hintEl = btn?.querySelector('.contact-method__hint');
+    const valueEl = btn?.querySelector('.contact-method__value');
+
+    btn?.addEventListener('click', async () => {
+      if (!hintEl || !valueEl) return;
+      try {
+        await navigator.clipboard.writeText(emailAddress);
+        hintEl.textContent = 'Copied to clipboard';
+        btn.classList.add('is-copied');
+        window.setTimeout(() => {
+          hintEl.textContent = 'Click to copy';
+          btn.classList.remove('is-copied');
+        }, 2200);
+      } catch {
+        hintEl.textContent = 'Could not copy — select the address above';
+        window.setTimeout(() => {
+          hintEl.textContent = 'Click to copy';
+        }, 3200);
+      }
+    });
+  </script>
 
 </BaseLayout>
