@@ -1,6 +1,6 @@
 ---
-import '@fontsource/fraunces/400.css';
-import '@fontsource/fraunces/700.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/700.css';
 import '@fontsource/jetbrains-mono/400.css';
 import '@fontsource/jetbrains-mono/500.css';
 import '@fontsource/jetbrains-mono/600.css';
@@ -53,19 +53,6 @@ const canonicalURL = Astro.url;
       // Close mobile nav when a link is clicked
       links?.querySelectorAll('a').forEach((a) => {
         a.addEventListener('click', () => links.classList.remove('is-open'));
-      });
-
-      // Minimal FAQ accordion
-      document.querySelectorAll<HTMLElement>('.faq-item__question').forEach((btn) => {
-        btn.addEventListener('click', () => {
-          const item = btn.closest('.faq-item');
-          if (!item) return;
-          const isOpen = item.classList.contains('faq-item--open');
-          document.querySelectorAll('.faq-item').forEach((el) =>
-            el.classList.remove('faq-item--open'),
-          );
-          if (!isOpen) item.classList.add('faq-item--open');
-        });
       });
     </script>
   </body>
